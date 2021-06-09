@@ -7,4 +7,19 @@ function parseBuildConfig(){
     return JSON.parse(build_config)['entry_map'];
 }
 
-module.exports = parseBuildConfig;
+function parseProcessArgs(argumentsArr, processArgsObj){
+  for(let i = 0; i < argumentsArr.length; i++){
+    const key = argumentsArr[i].split("=")[0];
+    const value = argumentsArr[i].split("=")[1];
+    switch(key){
+      case "watch": 
+      processArgsObj.isWatchEnable = value === "true" ? true : false;
+      break;
+    }
+  }
+}
+
+module.exports = {
+  parseBuildConfig,
+  parseProcessArgs
+};

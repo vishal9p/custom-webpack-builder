@@ -1,0 +1,18 @@
+{
+    "entry_map": [
+        {
+            "entry" : "./src/index.js",
+            "output": {
+                "fileName": "entry_1",
+                "buildDir": "./dist"
+            }
+        },
+        {
+            "entry" : "./src/api.js",
+            "output": {
+                "fileName": "entry_2",
+                "buildDir": "./dist"
+            }
+        }
+    ]
+}

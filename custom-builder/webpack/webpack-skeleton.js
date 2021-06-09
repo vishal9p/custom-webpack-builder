@@ -1,7 +1,7 @@
 // TODO : This file will only hold skeleton of configration
 function getWebpackConfigSkeleton(configParam) {
   return {
-    mode: "development",
+    mode: "production",
     entry: {
       [configParam.entryName]: configParam.entry,
     },
